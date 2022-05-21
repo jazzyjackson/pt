@@ -1,0 +1,281 @@
+<html>
+    <head>
+        <style>
+            html {
+                --size: min(calc(90vw / 18), calc(90vh / 7));
+                background: black;
+            }
+
+            body {
+                width: 100%;
+            }
+
+            .table {
+                position: relative;
+                width: calc(var(--size) * 18);
+                margin: 0 auto;
+            }
+
+            .row {
+                width: 100%;
+                display: flex;
+            }
+
+            .cell {
+                width: var(--size);
+                height: var(--size);
+                background: var(--image);
+                background-size: cover;
+            }
+
+            .gap {
+                flex: 1;
+            }
+
+            .f-block {
+                width: var(--size);
+                height: var(--size);
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .f-block .cell {
+                width: calc(var(--size) / 4);
+                height: calc(var(--size) / 4);
+            }
+
+            .table::before {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 0px;
+                left: calc(var(--size) * 2);
+                background: var(--image);
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                width: calc(var(--size) * 10);
+                height: calc(var(--size) * 3);
+            }
+
+            @media (max-width: 1000px) {
+                html {
+                    --size: calc(90vw / 7);
+                }
+
+                .table::before {
+                    display: none;
+                }
+
+                .table {
+                    width: calc(7 * var(--size));
+                    height: calc(32 * var(--size));
+                    display: flex;
+                    flex-direction: row-reverse;
+                }
+
+                .f-block {
+                    height: calc(15 * var(--size))
+                }
+
+                .f-block .cell {
+                    width: var(--size);
+                    height: var(--size);
+                }
+
+                .row {
+                    width: var(--size);
+                    height: calc(32 * var(--size));
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+
+            @media (max-width: 800px) {
+                html {
+                    --size: 90vw;
+                }
+
+                .table::before {
+                    display: none;
+                }
+
+                .table {
+                    width: var(--size);
+                    display: block;
+                }
+
+                .row {
+                    display: initial;
+                    height: unset;
+                }
+
+                .gap {
+                    display: none;
+                }
+
+                .cell, .f-block .cell {
+                    width: var(--size);
+                    height: calc(191 / 516 * var(--size));
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="table">
+            <div class="row">
+                <div title="Hydrogen" class="cell left" style="--image: url(1.JPG)"></div>
+                <div class="gap"></div>
+                <div title="Helium" class="cell right" style="--image: url(2.JPG)"></div>
+            </div>
+            <div class="row">
+                <div title="Lithium" class="cell left" style="--image: url(3.JPG)"></div>
+                <div title="Beryllium" class="cell left" style="--image: url(4.JPG)"></div>
+                <div class="gap"></div>
+                <div title="Boron" class="cell right" style="--image: url(5.JPG)"></div>
+                <div title="Carbon" class="cell right" style="--image: url(6.JPG)"></div>
+                <div title="Nitrogen" class="cell right" style="--image: url(7.JPG)"></div>
+                <div title="Oxygen" class="cell right" style="--image: url(8.JPG)"></div>
+                <div title="Fluorine" class="cell right" style="--image: url(9.JPG)"></div>
+                <div title="Neon" class="cell right" style="--image: url(10.JPG)"></div>
+            </div>
+            <div class="row">
+                <div title="Sodium" class="cell left" style="--image: url(11.JPG)"></div>
+                <div title="Magnesium" class="cell left" style="--image: url(12.JPG)"></div>
+                <div class="gap"></div>
+                <div title="Aluminum" class="cell right" style="--image: url(13.JPG)"></div>
+                <div title="Silicon" class="cell right" style="--image: url(14.JPG)"></div>
+                <div title="Phosphorus" class="cell right" style="--image: url(15.JPG)"></div>
+                <div title="Sulfur" class="cell right" style="--image: url(16.JPG)"></div>
+                <div title="Chlorine" class="cell right" style="--image: url(17.JPG)"></div>
+                <div title="Argon" class="cell right" style="--image: url(18.JPG)"></div>
+            </div>
+            <div class="row">
+                <div title="Potassium" class="cell left" style="--image: url(19.JPG)"></div>
+                <div title="Calcium" class="cell left" style="--image: url(20.JPG)"></div>
+                <div class="gap"></div>
+                <div title="Scandium" class="cell right" style="--image: url(21.JPG)"></div>
+                <div title="Titanium" class="cell right" style="--image: url(22.JPG)"></div>
+                <div title="Vanadium" class="cell right" style="--image: url(23.JPG)"></div>
+                <div title="Chromium" class="cell right" style="--image: url(24.JPG)"></div>
+                <div title="Manganese" class="cell right" style="--image: url(25.JPG)"></div>
+                <div title="Iron" class="cell right" style="--image: url(26.JPG)"></div>
+                <div title="Cobalt" class="cell right" style="--image: url(27.JPG)"></div>
+                <div title="Nickel" class="cell right" style="--image: url(28.JPG)"></div>
+                <div title="Copper" class="cell right" style="--image: url(29.JPG)"></div>
+                <div title="Zinc" class="cell right" style="--image: url(30.JPG)"></div>
+                <div title="Gallium" class="cell right" style="--image: url(31.JPG)"></div>
+                <div title="Germanium" class="cell right" style="--image: url(32.JPG)"></div>
+                <div title="Arsenic" class="cell right" style="--image: url(33.JPG)"></div>
+                <div title="Selenium" class="cell right" style="--image: url(34.JPG)"></div>
+                <div title="Bromine" class="cell right" style="--image: url(35.JPG)"></div>
+                <div title="Krypton" class="cell right" style="--image: url(36.JPG)"></div>
+            </div>
+            <div class="row">
+                <div title="Rubidium" class="cell left" style="--image: url(37.JPG)"></div>
+                <div title="Strontium" class="cell left" style="--image: url(38.JPG)"></div>
+                <div class="gap"></div>
+                <div title="Yttrium" class="cell right" style="--image: url(39.JPG)"></div>
+                <div title="Zirconium" class="cell right" style="--image: url(40.JPG)"></div>
+                <div title="Niobium" class="cell right" style="--image: url(41.JPG)"></div>
+                <div title="Molybdenum" class="cell right" style="--image: url(42.JPG)"></div>
+                <div title="Technetium" class="cell right" style="--image: url(43.JPG)"></div>
+                <div title="Ruthenium" class="cell right" style="--image: url(44.JPG)"></div>
+                <div title="Rhodium" class="cell right" style="--image: url(45.JPG)"></div>
+                <div title="Palladium" class="cell right" style="--image: url(46.JPG)"></div>
+                <div title="Silver" class="cell right" style="--image: url(47.JPG)"></div>
+                <div title="Cadmium" class="cell right" style="--image: url(48.JPG)"></div>
+                <div title="Indium" class="cell right" style="--image: url(49.JPG)"></div>
+                <div title="Tin" class="cell right" style="--image: url(50.JPG)"></div>
+                <div title="Antimony" class="cell right" style="--image: url(51.JPG)"></div>
+                <div title="Tellurium" class="cell right" style="--image: url(52.JPG)"></div>
+                <div title="Iodine" class="cell right" style="--image: url(53.JPG)"></div>
+                <div title="Xenon" class="cell right" style="--image: url(54.JPG)"></div>
+            </div>
+            <div class="row">
+                <div title="Cesium" class="cell left" style="--image: url(55.JPG)"></div>
+                <div title="Barium" class="cell left" style="--image: url(56.JPG)"></div>
+                <div class="f-block">
+                    <div title="Lanthanum" class="cell center" style="--image: url(57.JPG)"></div>
+                    <div title="Cerium" class="cell center" style="--image: url(58.JPG)"></div>
+                    <div title="Praseodymium" class="cell center" style="--image: url(59.JPG)"></div>
+                    <div title="Neodymium" class="cell center" style="--image: url(60.JPG)"></div>
+                    <div title="Promethium" class="cell center" style="--image: url(61.JPG)"></div>
+                    <div title="Samarium" class="cell center" style="--image: url(62.JPG)"></div>
+                    <div title="Europium" class="cell center" style="--image: url(63.JPG)"></div>
+                    <div title="Gadolinium" class="cell center" style="--image: url(64.JPG)"></div>
+                    <div title="Terbium" class="cell center" style="--image: url(65.JPG)"></div>
+                    <div title="Dysprosium" class="cell center" style="--image: url(66.JPG)"></div>
+                    <div title="Holmium" class="cell center" style="--image: url(67.JPG)"></div>
+                    <div title="Erbium" class="cell center" style="--image: url(68.JPG)"></div>
+                    <div title="Thulium" class="cell center" style="--image: url(69.JPG)"></div>
+                    <div title="Ytterbium" class="cell center" style="--image: url(70.JPG)"></div>
+                    <div title="Lutetium" class="cell center" style="--image: url(71.JPG)"></div>
+                </div>
+                <div title="Hafnium" class="cell right" style="--image: url(72.JPG)"></div>
+                <div title="Tantalum" class="cell right" style="--image: url(73.JPG)"></div>
+                <div title="Tungsten" class="cell right" style="--image: url(74.JPG)"></div>
+                <div title="Rhenium" class="cell right" style="--image: url(75.JPG)"></div>
+                <div title="Osmium" class="cell right" style="--image: url(76.JPG)"></div>
+                <div title="Iridium" class="cell right" style="--image: url(77.JPG)"></div>
+                <div title="Platinum" class="cell right" style="--image: url(78.JPG)"></div>
+                <div title="Gold" class="cell right" style="--image: url(79.JPG)"></div>
+                <div title="Mercury" class="cell right" style="--image: url(80.JPG)"></div>
+                <div title="Thallium" class="cell right" style="--image: url(81.JPG)"></div>
+                <div title="Lead" class="cell right" style="--image: url(82.JPG)"></div>
+                <div title="Bismuth" class="cell right" style="--image: url(83.JPG)"></div>
+                <div title="Polonium" class="cell right" style="--image: url(84.JPG)"></div>
+                <div title="Astatine" class="cell right" style="--image: url(85.JPG)"></div>
+                <div title="Radon" class="cell right" style="--image: url(86.JPG)"></div>
+            </div>
+            <div class="row">
+                <div title="Francium" class="cell left" style="--image: url(87.JPG)"></div>
+                <div title="Radium" class="cell left" style="--image: url(88.JPG)"></div>
+                <div class="f-block">
+                    <div title="Actinium" class="cell center" style="--image: url(89.JPG)"></div>
+                    <div title="Thorium" class="cell center" style="--image: url(90.JPG)"></div>
+                    <div title="Protactinium" class="cell center" style="--image: url(91.JPG)"></div>
+                    <div title="Uranium" class="cell center" style="--image: url(92.JPG)"></div>
+                    <div title="Neptunium" class="cell center" style="--image: url(93.JPG)"></div>
+                    <div title="Plutonium" class="cell center" style="--image: url(94.JPG)"></div>
+                    <div title="Americium" class="cell center" style="--image: url(95.JPG)"></div>
+                    <div title="Curium" class="cell center" style="--image: url(96.JPG)"></div>
+                    <div title="Berkelium" class="cell center" style="--image: url(97.JPG)"></div>
+                    <div title="Californium" class="cell center" style="--image: url(98.JPG)"></div>
+                    <div title="Einsteinium" class="cell center" style="--image: url(99.JPG)"></div>
+                    <div title="Fermium" class="cell center" style="--image: url(100.JPG)"></div>
+                    <div title="Mendelevium" class="cell center" style="--image: url(101.JPG)"></div>
+                    <div title="Nobelium" class="cell center" style="--image: url(102.JPG)"></div>
+                    <div title="Lawrencium" class="cell center" style="--image: url(103.JPG)"></div>
+                </div>
+                <div title="Rutherfordium" class="cell right" style="--image: url(104.JPG)"></div>
+                <div title="Dubnium" class="cell right" style="--image: url(105.JPG)"></div>
+                <div title="Seaborgium" class="cell right" style="--image: url(106.JPG)"></div>
+                <div title="Bohrium" class="cell right" style="--image: url(107.JPG)"></div>
+                <div title="Hassium" class="cell right" style="--image: url(108.JPG)"></div>
+                <div title="Meitnerium" class="cell right" style="--image: url(109.JPG)"></div>
+                <div title="Darmstadtium" class="cell right" style="--image: url(110.JPG)"></div>
+                <div title="Roentgenium" class="cell right" style="--image: url(111.JPG)"></div>
+                <div title="Copernicium" class="cell right" style="--image: url(112.JPG)"></div>
+                <div title="Nihonium" class="cell right" style="--image: url(113.JPG)"></div>
+                <div title="Flerovium" class="cell right" style="--image: url(114.JPG)"></div>
+                <div title="Moscovium" class="cell right" style="--image: url(115.JPG)"></div>
+                <div title="Livermorium" class="cell right" style="--image: url(116.JPG)"></div>
+                <div title="Tennessine" class="cell right" style="--image: url(117.JPG)"></div>
+                <div title="Oganesson" class="cell right" style="--image: url(118.JPG)"></div>
+                </div>
+            </div>
+        </div>
+        <script>
+        Array.from(document.querySelectorAll('.cell'), cell => {
+            console.log(cell)
+            cell.addEventListener('mouseenter', e => {
+                document.body.setAttribute('style', e.target.getAttribute('style'))
+            })
+        })
+        </script>
+    </body>
+</html>
