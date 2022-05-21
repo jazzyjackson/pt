@@ -57,7 +57,7 @@
         height: calc(var(--size) * 3);
     }
 
-    @media (min-width: 600px) and (max-width: 800px) {
+    @media (min-width: 1000px) and (max-width: 1300px) {
         html {
             --size: calc(90vw / 7);
         }
@@ -90,7 +90,7 @@
         }
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 1000px) {
         html {
             --size: 90vw;
         }
@@ -186,7 +186,6 @@ echo '</div>';
 ?>
 <script>
     Array.from(document.querySelectorAll('.cell'), cell => {
-        console.log(cell)
         cell.addEventListener('mouseenter', e => {
             document.body.setAttribute('style', e.target.getAttribute('style'))
         })
