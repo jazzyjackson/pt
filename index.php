@@ -57,7 +57,7 @@
         height: calc(var(--size) * 3);
     }
 
-    @media (max-width: 1000px) {
+    @media (min-width: 600px) and (max-width: 800px) {
         html {
             --size: calc(90vw / 7);
         }
@@ -90,7 +90,7 @@
         }
     }
 
-    @media (max-width: 800px) {
+    @media (max-width: 600px) {
         html {
             --size: 90vw;
         }
